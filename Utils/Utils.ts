@@ -25,4 +25,10 @@ namespace Utils {
             .replace(/@colon@/g, ':');
     }
 
+
+
+    export const DerivesFrom = (a: any, b: any): boolean => {
+        return (a && b) && typeof b === 'function' && (a.prototype instanceof b);
+    } 
+
 }

@@ -3,11 +3,15 @@
 
 abstract class Behavior {
 
-
-    public element: HTMLElement;
+    public readonly element: HTMLElement;
 
     constructor(el: HTMLElement) {
         this.element = el;
+
+        //this.Start();
     }
+
+
+    Start() { }
 
 } 

@@ -6,10 +6,6 @@ console.log('webx loaded...');
 window.onload = function() {
 
 
-    class Testing extends Behavior {
-
-    }
-
 
     // look for behavior attributes
     let all = document.body.querySelectorAll('*');
@@ -28,10 +24,12 @@ window.onload = function() {
                 for(const seg of namepath.slice(1)) {
                     type = type[seg];
                 }
-                if(type) {
-                    console.log(type);
-                }
 
+
+                if(!Utils.DerivesFrom(type, Behavior)) {
+                    console.error(name + ' is not a valid behavior');
+                    continue;
+                }
                 const inst = new type(v);
 
                 const rawjsontxt = beh.substring(charindex, beh.length);
@@ -45,7 +43,8 @@ window.onload = function() {
                         }
                     }
                 }
-                console.log(inst);
+                inst.Start();
+                //console.log(inst);
             }
         }
     });
