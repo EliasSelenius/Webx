@@ -78,6 +78,11 @@ abstract class Behavior {
         });
     }
 
+    public static IsValidFor(el: HTMLElement): boolean {
+        const filter = 
+    }
+
+
     //#endregion
 
 }
