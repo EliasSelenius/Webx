@@ -1,7 +1,7 @@
 
 
 
-namespace Utils {
+namespace webx.Utils {
 
 
     export const IsNullOrWhitespace = (str: string | null): boolean => {

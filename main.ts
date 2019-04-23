@@ -26,15 +26,15 @@ window.onload = function() {
                 }
 
 
-                if(!Utils.DerivesFrom(type, Behavior)) {
+                if(!webx.Utils.DerivesFrom(type, webx.Behavior)) {
                     console.error(name + ' is not a valid behavior');
                     continue;
                 }
                 const inst = new type(v);
 
                 const rawjsontxt = beh.substring(charindex, beh.length);
-                if(!Utils.IsNullOrWhitespace(rawjsontxt)) {
-                    const Json = JSON.parse(Utils.FixJson(rawjsontxt));
+                if(!webx.Utils.IsNullOrWhitespace(rawjsontxt)) {
+                    const Json = JSON.parse(webx.Utils.FixJson(rawjsontxt));
                     for (const key in Json) {
                         if (Json.hasOwnProperty(key) && inst.hasOwnProperty(key)) {
                             inst[key] = Json[key];

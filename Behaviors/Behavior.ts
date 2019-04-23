@@ -1,17 +1,19 @@
 
+/// <reference path="../Taghandle.ts" />
 
+namespace webx {
+    export abstract class Behavior extends TaghandleUser {
 
-abstract class Behavior {
+        constructor(el: HTMLElement) {
+            super(el);
+            this.tag.behaviors.push(this);
 
-    public readonly element: HTMLElement;
+            //this.Start();
+        }
+    
+    
+        Start() { }
+    
+    } 
+}
 
-    constructor(el: HTMLElement) {
-        this.element = el;
-
-        //this.Start();
-    }
-
-
-    Start() { }
-
-} 
