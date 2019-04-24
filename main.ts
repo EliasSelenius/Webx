@@ -1,12 +1,15 @@
 
 
+
 console.log('webx loaded...');
 
 
 window.onload = function() {
 
+    Behavior.InitAllInBody();
 
 
+/*
     // look for behavior attributes
     let all = document.body.querySelectorAll('*');
     all.forEach((v, index) => {
@@ -47,7 +50,7 @@ window.onload = function() {
                 //console.log(inst);
             }
         }
-    });
+    });*/
 }
 
 

@@ -31,4 +31,17 @@ namespace webx.Utils {
         return (a && b) && typeof b === 'function' && (a.prototype instanceof b);
     } 
 
+
+    export const OtherHasAll = (obj: any, other: any): boolean => {
+        if(obj && other) {
+            for (const key in obj) {
+                if (!other.hasOwnProperty(key)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
 }
